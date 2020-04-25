@@ -67,7 +67,7 @@ function processLength(list, callback) {
  * should return 'barbar'.
 */
 function processLastItem(stringList, callback) {
-  return callback(stringList[stringList.lenght -1]);
+  return callback(stringList.length -1);
 }
 
 /**
@@ -88,8 +88,8 @@ function processLastItem(stringList, callback) {
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(num1, num2, callback) {
+  return callback(num1 + num2);
 }
 
 /**
@@ -110,9 +110,10 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback){
+  return callback(num1 * num2);
 }
+
 
 /**
  * ### Challenge `processDuplicateFree`
