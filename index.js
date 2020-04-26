@@ -16,7 +16,7 @@
 */
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
-}
+} 
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -67,7 +67,7 @@ function processLength(list, callback) {
  * should return 'barbar'.
 */
 function processLastItem(stringList, callback) {
-  return callback(stringList.length -1);
+  return callback(stringList[1]);
 }
 
 /**
@@ -157,8 +157,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function lowerCaseStrings(strings) {
-  strings = strings.toLowerCase();
-  return strings;
+  return strings.toLowerCase;
 }
 
 /**
@@ -296,6 +295,7 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
 */
 function tallyUpDonations(runners) {
   return runners.reduce((a,b) => a+b.donation,0);
+}
 
 /////////////// CLOSURES ///////////////
 /////////////// CLOSURES ///////////////
@@ -352,8 +352,13 @@ function counter2() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(num) {
+  let count = 0;
+  function counter() {
+    count > num ? (count = 0) : count;
+    return count++;
+  }
+  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
