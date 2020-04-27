@@ -157,6 +157,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function lowerCaseStrings(strings) {
+  var fruits = [].map(strings => strings.toLowerCase());
   return strings.toLowerCase;
 }
 
@@ -187,7 +188,7 @@ function isItAnApple(strings) {
  * 
  * @param strings an array of strings.
  * @returns a similar array, with an entries that are 'apple' removed.
- * 
+ *
  *This function is case sensitive and, for example, should not remove 'Apple' or 'APPLE'
  * 
  * Examples of usage of this function:
@@ -197,10 +198,9 @@ function isItAnApple(strings) {
 */
 function removeApple(strings) {
   var fruits = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango'];
-  
-  fruits = fruits.filter((fruit, arr) => {
-    arr.pop ('apple');
-    return strings;
+  var word = [`apple`];
+  fruits = word.filter(function(string) {
+    return strings !== word;
   })
 }
 
