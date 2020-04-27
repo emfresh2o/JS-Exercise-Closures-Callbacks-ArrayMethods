@@ -198,10 +198,8 @@ function isItAnApple(strings) {
 */
 function removeApple(strings) {
   var fruits = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango'];
-  var word = [`apple`];
-  fruits = word.filter(function(string) {
-    return strings !== word;
-  })
+  var word = `apple`;
+  fruits = fruits.filter(strings => strings !== word);
 }
 
 /**
