@@ -115,7 +115,7 @@ function processProduct(num1, num2, callback){
 }
 
 
-/**
+/*********
  * ### Challenge `processDuplicateFree`
  * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
  * 
@@ -133,8 +133,8 @@ function processProduct(num1, num2, callback){
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
+    return callback(list.filter((item, index) => list.indexOf(item) === index));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -189,7 +189,7 @@ function isItAnApple(strings) {
   });
 }
 
-/**
+/********
  * ### Challenge `removeApple`
  * 
  * @instructions
@@ -205,13 +205,14 @@ function isItAnApple(strings) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(strings) {
-  var fruits = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango'];
-  var word = `apple`;
-  fruits = fruits.filter(strings => strings !== word);
+function removeApple(array) {
+  return array.filter(function(item){
+    return item != 'apple';
+  })
+
 }
 
-/**
+/*********
  * ### Challenge `stringSmash`
  * 
  * @instructions
@@ -227,9 +228,10 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
 function stringSmash(strings) {
-  var fruits = []
-  var fruits = fruits.reduce((strings));
-  return stringSmash;
+  const newArray = strings.reduce(function(accumulator, item){
+    return accumulator + item;
+  });
+  return newArray;
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -271,7 +273,7 @@ function firstNamesAllCaps(runners) {
   return runners.map(b => b.first_name.toUpperCase());
 }
 
-/**
+/********
  * ### Challenge `getRunnersByTShirtSize`
  * * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
  * 
@@ -289,7 +291,7 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
   return runners.filter(b => b.shirt_size == tShirtSize);
 }
 
-/**
+/********
  * ### Challenge `tallyUpDonations`
  *  * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
  * 
